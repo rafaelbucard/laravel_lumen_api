@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\VarDumper\Cloner\Data;
 
 
- abstract class BaseController 
+ abstract class BaseController extends Controller
 {
     protected $classe;
     public function index(){

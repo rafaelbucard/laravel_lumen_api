@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estabelecimento extends Model {
 
-    public $timesstamp = false;
-    protected $fillable = ['nome'];
+    public $timestamps = false;
+    protected $fillable = ['name'];
 
-    public function clientes(){
+    public function cliente(){
 
         return $this->hasMany(related:Cliente::class);
     }

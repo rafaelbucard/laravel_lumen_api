@@ -5,8 +5,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cliente  extends Model{
 
-    public $timesstamp = false;
-    protected $fillable = ['nome','email','estabelecimento_id'];
+    public $timestamps = false;
+    protected $fillable = [
+        'name', 'email','estabelecimento_id'
+    ];
     public function estabelecimento(){
 
         return $this->belongsTo(Estabelecimento::class);
