@@ -17,12 +17,12 @@ class CreateTableClientes extends Migration
             $table->tinyIncrements('id');
             $table->string('nome');
             $table->string('email');
-            $table->integer('estabelecimento_id')->unsigned();
+            $table->integer('estabelecimento_id');
+
+            $table->foreign('estabelecimento_id')
+                ->references('estabelecimentos')
+                ->on('id');
         });
-        
-     Schema::table('clientes', function($table) {
-            $table->foreign('estabelecimento_id')->references('id')->on('estabelecimentos');
-       });
     }
 
     /**

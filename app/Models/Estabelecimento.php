@@ -4,14 +4,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 
-class Estabelecimento extends Model {
-
+class Estabelecimento extends Model
+{
     public $timestamps = false;
-    protected $fillable = ['name'];
+    protected $fillable = ['nome'];
 
-    public function cliente(){
-
-        return $this->hasMany(related:Cliente::class);
+    public function cliente()
+    {
+        return $this->hasMany(Cliente::class);
     }
-
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Symfony\Component\VarDumper\Cloner\Data;
+
 
 
  abstract class BaseController extends Controller
@@ -15,9 +15,9 @@ use Symfony\Component\VarDumper\Cloner\Data;
     }
 
     public function store(Request $request){
-        
+       
         return response()
-        ->json($this->classe::create(['nome'=>$request->nome]), status:201);
+        ->json($this->classe::create($request->all()), status:201);
     }
     public function show(int $id){
         $base = $this->classe::find($id);
@@ -28,10 +28,11 @@ use Symfony\Component\VarDumper\Cloner\Data;
     }
     public function update(int $id, Request $request){
         $base = $this->classe::find($id);
+       
         if(is_null($base)){
             return response()->json(['erro'=>'404'],status: 404);
         }
-        $base->fill(['nome'=> $request->nome]);
+        $base->fill($request->all());
         $base->save();
 
         return $base;

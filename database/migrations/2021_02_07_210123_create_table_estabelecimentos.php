@@ -14,8 +14,8 @@ class CreateTableEstabelecimentos extends Migration
     public function up()
     {
         Schema::create('estabelecimentos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome');
+            $table->tinyIncrements('id');
+            $table->string('nome')->unique();
         });
     }
 
