@@ -18,6 +18,9 @@ class EstabelecimentosController extends Controller
         return response()
         ->json(Estabelecimento::create(['nome'=>$request->nome]), status:201);
     }
+    public function get(int $id){
+        $estabelecimento = Estabelecimento::find($id);
+    }
 
     //
 }
