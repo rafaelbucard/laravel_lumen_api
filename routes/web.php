@@ -19,8 +19,18 @@ $router->get('/', function () use ($router) {
 
 
 $router->group(['prefix'=>'api/v2'], function () use ($router){
-    $router->post('estabelecimentos', action:'EstabelecimentosController@store');
-    $router->get('estabelecimentos', action:'EstabelecimentosController@index');
-    $router->get('estabelecimentos/{id}', action:'EstabelecimentosController@show');
-    $router->put('estabelecimentos/{id}', action:'EstabelecimentosController@update');
+    $router->group(['prefix'=>'estabelecimentos'], function () use ($router){
+        $router->post(uri:'', action:'EstabelecimentosController@store');
+        $router->get(uri:'', action:'EstabelecimentosController@index');
+        $router->get(uri:'{id}', action:'EstabelecimentosController@show');
+        $router->put(uri:'{id}', action:'EstabelecimentosController@update');
+        $router->delete(uri:'{id}', action:'EstabelecimentosController@destroy');
+    });
+    $router->group(['prefix'=>'clientes'], function () use ($router){
+        $router->post(uri:'', action:'ClientesController@store');
+        $router->get(uri:'', action:'ClientesController@index');
+        $router->get(uri:'{id}', action:'ClientesController@show');
+        $router->put(uri:'{id}', action:'ClientesController@update');
+        $router->delete(uri:'{id}', action:'ClientesController@destroy');
+    });
 });
