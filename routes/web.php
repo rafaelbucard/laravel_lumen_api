@@ -21,5 +21,6 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix'=>'api/v2'], function () use ($router){
     $router->post('estabelecimentos', action:'EstabelecimentosController@store');
     $router->get('estabelecimentos', action:'EstabelecimentosController@index');
-    $router->get('estabelecimentos/{id}', action:'EstabelecimentosController@get');
+    $router->get('estabelecimentos/{id}', action:'EstabelecimentosController@show');
+    $router->put('estabelecimentos/{id}', action:'EstabelecimentosController@update');
 });
