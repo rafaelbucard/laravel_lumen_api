@@ -14,6 +14,12 @@ use Illuminate\Http\Request;
         return $this->classe::all();
     }
 
+    public function page(Request $request){
+
+        return $this->classe::paginate($request->perPage);
+    }
+
+
     public function store(Request $request){
        
         return response()

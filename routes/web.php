@@ -25,6 +25,10 @@ $router->group(['prefix'=>'api/v2'], function () use ($router){
         $router->get(uri:'{id}', action:'EstabelecimentosController@show');
         $router->put(uri:'{id}', action:'EstabelecimentosController@update');
         $router->delete(uri:'{id}', action:'EstabelecimentosController@destroy');
+
+        $router->get(uri:'{estabelecimento_id}/clientes', action:'ClientesController@clientesBusca');
+        $router->post(uri:'{estabelecimento_id}/clientes', action:'ClientesController@clientesPost');
+
     });
     $router->group(['prefix'=>'clientes'], function () use ($router){
         $router->post(uri:'', action:'ClientesController@store');
@@ -32,5 +36,13 @@ $router->group(['prefix'=>'api/v2'], function () use ($router){
         $router->get(uri:'{id}', action:'ClientesController@show');
         $router->put(uri:'{id}', action:'ClientesController@update');
         $router->delete(uri:'{id}', action:'ClientesController@destroy');
+        $router->get(uri:'', action:'ClientesController@index');
     });
+     $router->group(['prefix'=>'page/clientes'], function () use ($router){
+        $router->get(uri:'', action:'ClientesController@page');
+    });
+    $router->group(['prefix'=>'page/estabelecimentos'], function () use ($router){
+        $router->get(uri:'', action:'EstabelecimentosController@page');
+    });
+   
 });

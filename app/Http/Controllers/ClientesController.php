@@ -12,4 +12,12 @@ class ClientesController extends BaseController
         $this->classe = Cliente::class;
     }
 
+    public function clientesBusca(int $estabelecimento_id) {
+        $clientes = Cliente::query()
+        ->where('estabelecimento_id',$estabelecimento_id)
+        ->get();
+
+        return $clientes;
+    }
+
 }
