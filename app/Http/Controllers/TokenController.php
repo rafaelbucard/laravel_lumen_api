@@ -18,7 +18,7 @@ public function createToken(Request $request) {
         if($usuario->email == $request->email && $request->password == $usuario->password){
             $token= JWT::encode(
                 ['email'=> $request->email], 
-            env('JWT_pass'));
+            env('JWT_PASS'));
             return [
                 'access_token'=>$token  ];
         }
