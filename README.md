@@ -1,8 +1,9 @@
-# Laravel/Lumen API REST Com (JSON Web Tokens) :bulb:
+# Laravel/Lumen API REST  :bulb:
 
-Api de para cadastro de Estabelecimentos e Clientes
+Api  para cadastro de Estabelecimentos e Clientes  utilizando autentificação com (JSON Web Tokens).
 
 ### Ferramentas:
+
 Laravel/lumen: https://lumen.laravel.com/
 
 JWT: https://jwt.io/
@@ -16,7 +17,7 @@ PHP: 8.0.0
 
 [Click Aqui para o Arquivo SQL](https://github.com/rafaelbucard/laravel_lumen_api/blob/main/lumen_fideliz%20(1).sql)
 
-
+Usuário  teste já cadastrado no banco de dados!
 
 ## Endpoint Principais:
 
