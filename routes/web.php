@@ -26,8 +26,10 @@ $router->group(['prefix'=>'api/v2'], function () use ($router){
         $router->put(uri:'{id}', action:'EstabelecimentosController@update');
         $router->delete(uri:'{id}', action:'EstabelecimentosController@destroy');
 
-        $router->get(uri:'{estabelecimento_id}/clientes', action:'ClientesController@clientesBusca');
-        $router->post(uri:'{estabelecimento_id}/clientes', action:'ClientesController@clientesPost');
+        $router->get(uri:'{estabelecimento_id}/clientes', action:'EstabelecimentosController@clientesBusca');
+        $router->post(uri:'{estabelecimento_id}/clientes', action:'EstabelecimentosController@clientesPost');
+        $router->put(uri:'{estabelecimento_id}/clientes/{id}', action:'EstabelecimentosController@clientesUpdate');
+        $router->get(uri:'{estabelecimento_id}/clientes/{id}', action:'EstabelecimentosController@clientesId');
 
     });
     $router->group(['prefix'=>'clientes'], function () use ($router){
