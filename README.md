@@ -66,7 +66,7 @@ GET por Page api/v2/clientespage?page={numero da pagina} : Retorna 10 itemnspor 
 
 PUT **X-WWW-Form-Urlencoded** api/v2/estabelecimentos/{id do estabelecimento}/clientes/{id do cliente} : Recebe parametros e atualiza dados de cliente especifico status(200 ok), caso estabelecimento  não tenha cliente com id informado invalido status(404)
 
-# Proximos passos :
+# Próximos passos :
 
 Proximo passo é enviar URLs denavegação da Api seguindo o padrão HATEOAS, para a Contrução de uma API RESTfull
 
