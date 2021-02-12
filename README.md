@@ -68,6 +68,6 @@ PUT **X-WWW-Form-Urlencoded** api/v2/estabelecimentos/{id do estabelecimento}/cl
 
 # Próximos passos :
 
-Próximo passo é enviar URLs denavegação da Api seguindo o padrão HATEOAS, para a Contrução de uma API RESTfull
+Próximo passo é enviar URLs de navegação da Api seguindo o padrão HATEOAS, para a construção de uma API RESTfull
 
 Feiro Com :hearts: por Rafael Buçard
