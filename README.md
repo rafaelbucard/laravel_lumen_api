@@ -2,6 +2,21 @@
 
 Api de para cadastro de Estabelecimentos e Clientes
 
+### Ferramentas:
+laravel/lumen: https://lumen.laravel.com/
+
+jWT: https://jwt.io/
+
+PHP: 8.0.0
+
+Testes API Postman: https://www.postman.com/
+
+## Mysql:
+
+
+
+
+
 ## Endpoint Principais:
 
 POST /api/v2/login [Efetuar Login]
