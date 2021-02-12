@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -18,8 +18,8 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->group(['prefix'=>'api/v2','middlewere'=>'auth'], function () use ($router){
-    $router->group(['prefix'=>'estabelecimentos'], function () use ($router){
+$router->group(['prefix'=>'api/v2','middlewere'=>'autenticador'], function () use ($router){
+    $router->group(['prefix'=>'estabelecimentos','middlewere'=>'autenticador'], function () use ($router){
         $router->post(uri:'', action:'EstabelecimentosController@store');
         $router->get(uri:'', action:'EstabelecimentosController@index');
         $router->get(uri:'{id}', action:'EstabelecimentosController@show');
@@ -32,7 +32,7 @@ $router->group(['prefix'=>'api/v2','middlewere'=>'auth'], function () use ($rout
         $router->get(uri:'{estabelecimento_id}/clientes/{id}', action:'EstabelecimentosController@clientesId');
 
     });
-    $router->group(['prefix'=>'clientes'], function () use ($router){
+    $router->group(['prefix'=>'clientes','middlewere'=>'autenticador'], function () use ($router){
         $router->post(uri:'', action:'ClientesController@store');
         $router->get(uri:'', action:'ClientesController@index');
         $router->get(uri:'{id}', action:'ClientesController@show');
@@ -40,10 +40,10 @@ $router->group(['prefix'=>'api/v2','middlewere'=>'auth'], function () use ($rout
         $router->delete(uri:'{id}', action:'ClientesController@destroy');
         $router->get(uri:'', action:'ClientesController@index');
     });
-     $router->group(['prefix'=>'page/clientes'], function () use ($router){
+     $router->group(['prefix'=>'page/clientes', 'middlewere'=>'autenticador'], function () use ($router){
         $router->get(uri:'', action:'ClientesController@page');
     });
-    $router->group(['prefix'=>'page/estabelecimentos'], function () use ($router){
+    $router->group(['prefix'=>'page/estabelecimentos', 'middlewere'=>'autenticador'], function () use ($router){
         $router->get(uri:'', action:'EstabelecimentosController@page');
     });
    
