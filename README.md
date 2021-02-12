@@ -4,6 +4,8 @@ Api de para cadastro de Estabelecimentos e Clientes
 
 ## Endpoint Principais:
 
+POST /api/v2/login [Efetuar Login]
+
 GET /api/v2/estabelecimentos/{id} [Retornar informações do estabelecimento]
 
 GET /api/v2/estabelecimentos/{id}/clientes [Retornar todos os clientes de um estabelecimento]
@@ -17,6 +19,8 @@ GET /api/v2/estabelecimentos/{id}/clientes/{id_cliente} [Retornar um cliente esp
 PUT /api/v2/estabelecimentos/{id}/clientes/{id_cliente} [Atualizar um cliente específico do estabelecimento]
 
 ## Endpoint group:
+
+POST /api/v2/login : recebe {"email": "EX@gmail.com" "password":"xyz"} retorna {token}
 
 GET api/v2/estabelecimentos : Retorna todos os estabecimentos cadastrado.
 
