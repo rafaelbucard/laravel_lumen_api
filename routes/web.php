@@ -18,7 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->group(['prefix'=>'api/v2'], function () use ($router){
+$router->group(['prefix'=>'api/v2','middlewere'=>'auth'], function () use ($router){
     $router->group(['prefix'=>'estabelecimentos'], function () use ($router){
         $router->post(uri:'', action:'EstabelecimentosController@store');
         $router->get(uri:'', action:'EstabelecimentosController@index');
@@ -48,3 +48,5 @@ $router->group(['prefix'=>'api/v2'], function () use ($router){
     });
    
 });
+
+$router->post(uri:'/api/v2/login', action:'TokenController@createToken');
