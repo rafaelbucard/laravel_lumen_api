@@ -1,19 +1,20 @@
-# Laravel/Lumen API REST Com (JSON Web Tokens)
+# Laravel/Lumen API REST Com (JSON Web Tokens) :bulb:
 
 Api de para cadastro de Estabelecimentos e Clientes
 
 ### Ferramentas:
-laravel/lumen: https://lumen.laravel.com/
+Laravel/lumen: https://lumen.laravel.com/
 
-jWT: https://jwt.io/
-
-PHP: 8.0.0
+JWT: https://jwt.io/
 
 Testes API Postman: https://www.postman.com/
 
+PHP: 8.0.0
+
+
 ## Mysql:
 
-
+[Click Aqui para o Arquivo SQL](https://github.com/rafaelbucard/laravel_lumen_api/blob/main/lumen_fideliz%20(1).sql)
 
 
 
@@ -64,4 +65,8 @@ GET por Page api/v2/clientespage?page={numero da pagina} : Retorna 10 itemnspor 
 
 PUT **X-WWW-Form-Urlencoded** api/v2/estabelecimentos/{id do estabelecimento}/clientes/{id do cliente} : Recebe parametros e atualiza dados de cliente especifico status(200 ok), caso estabelecimento  não tenha cliente com id informado invalido status(404)
 
- 
+# Proximos passos :
+
+Proximo passo é enviar URLs denavegação da Api seguindo o padrão HATEOAS, para a Contrução de uma API RESTfull
+
+Feiro Com :hearts: por Rafael Buçard
