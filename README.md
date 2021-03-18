@@ -70,6 +70,6 @@ PUT **X-WWW-Form-Urlencoded** api/v2/estabelecimentos/{id do estabelecimento}/cl
 
 Próximo passo é enviar URLs de navegação da Api seguindo o padrão HATEOAS, para a construção de uma API RESTfull
 
-obs: bug na validação para ser corrigido 
+obs: bug na Auth para ser corrigido 
 
 Feiro Com :hearts: por Rafael Buçard
